@@ -26,6 +26,12 @@ const ArtGallery = ({ navigateTo, filter = {} }) => {
             <img
               src={artwork.imageSrc}
               alt={artwork.title}
+              // Add loading and error handling
+              loading="lazy"
+              onError={(e) => {
+                console.error(`Error loading image for ${artwork.title}`, e);
+                e.target.src = '/path/to/fallback/image.jpg'; // Optional fallback
+              }}
             />
             <div>
               <h3>{artwork.title}</h3>

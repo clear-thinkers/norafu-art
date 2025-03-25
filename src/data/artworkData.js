@@ -17,13 +17,13 @@ export const artworkData = [
     imageSrc: `${process.env.PUBLIC_URL}/images/20250315.jpg`,
     tags: ['animal', 'marker']
   },
-    // Placeholder for more artworks
-    // Add more artworks here to reach 40+ pieces
-  ];
-  
-  export const filterArtworks = (artworks, year = null, tags = []) => {
-    return artworks.filter(artwork => 
-      (year === null || artwork.year === year) &&
-      (tags.length === 0 || tags.some(tag => artwork.tags.includes(tag)))
-    );
-  };
+  // Placeholder for more artworks
+  // Add more artworks here to reach 40+ pieces
+];
+
+export const filterArtworks = (artworks, year = null, tags = []) => {
+  return artworks.filter(artwork => 
+    (year === null || artwork.year === year) &&
+    (tags.length === 0 || tags.some(tag => artwork.tags.includes(tag)))
+  );
+};
