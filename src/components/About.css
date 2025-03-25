@@ -1,0 +1,57 @@
+/* About.css */
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.about-portrait {
+  max-width: 50%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.fixed-height-portrait {
+  height: 150px; /* Set a fixed height of 300 pixels */
+  object-fit: cover; /* Ensures the image covers the entire area without distortion */
+  object-position: center; /* Centers the image within the fixed height */
+  width: 100%; /* Ensures the image spans the full width of its container */
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #666;
+  margin-top: 30px;
+}
+
+p {
+  line-height: 1.6;
+  text-align: left;
+  margin-bottom: 15px;
+  width: 100%; /* Ensures the image spans the full width of its container */
+}
+
+button {
+  background-color: #d3c0d2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 20px 0;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #d3c0d2;
+}
