@@ -7,7 +7,7 @@ const About = ({ navigateTo }) => {
       <h1>About Nora Fu</h1>
       
       <img 
-        src="/images/profile.jpeg" 
+        src={process.env.PUBLIC_URL + "/images/profile.jpg"} 
         alt="Artist Portrait" 
         className="about-portrait"
       />

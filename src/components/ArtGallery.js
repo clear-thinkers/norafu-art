@@ -10,14 +10,14 @@ const ArtGallery = ({ navigateTo, filter = {} }) => {
     filter.tags || []
   );
 
-// Sort artworks by year in descending order (most recent first)
-const sortedArtworks = filteredArtworks.sort((a, b) => b.year - a.year);
+  // Sort filteredArtworks by year in descending order (most recent first)
+  const sortedArtworks = [...filteredArtworks].sort((a, b) => b.year - a.year);
 
   return (
     <div className="gallery-container">
       {/* Artwork Grid */}
       <div className="gallery-grid">
-        {filteredArtworks.map((artwork) => (
+        {sortedArtworks.map((artwork) => (
           <div
             key={artwork.id}
             className="gallery-item"
@@ -36,7 +36,7 @@ const sortedArtworks = filteredArtworks.sort((a, b) => b.year - a.year);
       </div>
 
       {/* No Artwork Found Message */}
-      {filteredArtworks.length === 0 && (
+      {sortedArtworks.length === 0 && (
         <div style={{ textAlign: 'center', color: '#888' }}>
           No artworks found matching the current filter.
         </div>

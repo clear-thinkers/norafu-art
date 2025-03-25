@@ -5,7 +5,7 @@ export const artworkData = [
       year: 2025,
       medium: 'pencil & marker',
       description: "a stll life drawing of a cup of mac n cheese, nora's water bottle and her fav sweets.",
-      imageSrc: '/images/20250324.jpeg',
+      imageSrc: `${process.env.PUBLIC_URL}/images/20250324.jpg`,
       tags: ['still life', 'marker']
     },
     {
@@ -14,7 +14,7 @@ export const artworkData = [
       year: 2025,
       medium: 'pencil & marker',
       description: "an eight-legged spider busy spinning her web.",
-      imageSrc: '/images/20250315.jpeg',
+      imageSrc: `${process.env.PUBLIC_URL}/images/20250315.jpg`,
       tags: ['animal', 'marker']
     },
     // Placeholder for more artworks
