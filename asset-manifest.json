@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/clear-thinkers/norafu-art.git/static/css/main.e427c57f.css",
+    "main.js": "/clear-thinkers/norafu-art.git/static/js/main.8b3fd266.js",
+    "static/js/453.a59e1ba8.chunk.js": "/clear-thinkers/norafu-art.git/static/js/453.a59e1ba8.chunk.js",
+    "index.html": "/clear-thinkers/norafu-art.git/index.html",
+    "main.e427c57f.css.map": "/clear-thinkers/norafu-art.git/static/css/main.e427c57f.css.map",
+    "main.8b3fd266.js.map": "/clear-thinkers/norafu-art.git/static/js/main.8b3fd266.js.map",
+    "453.a59e1ba8.chunk.js.map": "/clear-thinkers/norafu-art.git/static/js/453.a59e1ba8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e427c57f.css",
+    "static/js/main.8b3fd266.js"
+  ]
+}
