@@ -7,7 +7,7 @@ const About = ({ navigateTo }) => {
       <h1>About Nora Fu</h1>
       
       <img 
-          src="/norafu-art/images/profile.jpg"
+          src="/norafu-art/images/profile.JPG"
           alt="Artist Portrait"
           className="about-portrait"
       />
