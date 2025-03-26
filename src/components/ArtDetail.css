@@ -1,0 +1,92 @@
+.art-detail-container {
+    display: flex;
+    padding: 2rem;
+    gap: 2rem;
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+  
+  .art-detail-image {
+    flex: 0 0 60%;
+    margin-left: 2rem;
+  }
+  
+  .art-detail-image img {
+    width: 100%;
+    height: auto;
+    max-height: 700px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .art-detail-info {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Added for mobile layout */
+  }
+  
+  /* MOVED THE BACK BUTTON STYLES AFTER TAGS */
+  .back-button {
+    /* Removed align-self: flex-start */
+    margin-top: 2rem; /* Increased margin to create space after tags */
+    background-color: #d3c0d2;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: white;
+    transition: color 0.3s ease;
+      /* New additions */
+    align-self: flex-start; /* Left-align in flex container */
+    min-width: 150px; /* Fixed minimum width */
+    text-align: center; /* Align text to center */
+    padding: 10px 20px; /* Better click target */
+    border-radius: 4px; /* Optional: matches tag style */
+  }
+  
+  .back-button:hover {
+    background-color: #d3c0d2;
+  }
+  
+  .art-detail-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .art-tag {
+    background-color: #f4f4f4;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: #666;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .art-detail-container {
+      flex-direction: column;
+      padding: 1rem;
+    }
+  
+    .art-detail-image {
+      margin-left: 0;
+      margin-bottom: 1rem;
+      flex: 0 0 80%; /* Full width on mobile */
+    }
+  
+    .art-detail-image img {
+      max-height: 500px; /* Adjust mobile max-height */
+    }
+  
+    /* Optional: Move button to top in mobile if needed */
+    .back-button {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      margin-top: 0;
+    }
+  }

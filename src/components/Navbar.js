@@ -12,8 +12,8 @@ const Navbar = ({ navigateTo, currentView, handleYearFilter }) => {
         className="navbar-brand"
         onClick={() => navigateTo('gallery')}
       >
-        Nora Fu Art <br />
-        瓜瓜的画
+        <span style={{ fontSize: '2rem' }}>Nora Fu's Art</span> <br />
+        <span style={{ fontSize: '1.5rem' }}>瓜 瓜 的 画</span>
       </div>
 
       <div className="navbar-menu">

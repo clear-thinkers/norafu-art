@@ -10,6 +10,7 @@
     font-size: 1.5rem;
     font-weight: bold;
     cursor: pointer;
+    font-family: 'Iansui', 'Roboto', sans-serif; /* This adds the font change */
   }
   
   .navbar-menu {
@@ -29,10 +30,13 @@
     cursor: pointer;
     padding: 0.5rem 1rem;
     transition: background-color 0.3s ease;
+    font-family: 'Iansui', 'Roboto', sans-serif; /* This adds the font change */
+    color: #666;
   }
   
   .navbar button:hover {
     background-color: #e0e0e0;
+    
   }
   
   .navbar button.active {
@@ -49,6 +53,7 @@
     width: 100%;
     height: 2px;
     background-color: #333;
+
   }
   
   /* Mobile Responsiveness */
