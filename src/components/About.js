@@ -14,7 +14,7 @@ const About = ({ navigateTo }) => {
       
       <p>
       
-Born in July 2018, Nora Fu’s love for art blossomed at an incredibly young age. 
+Born in 2018, Nora Fu’s love for art blossomed at an incredibly young age. 
 By the time she was just 18 months old, Nora showed an extraordinary fascination with colors and drawings, captivating her family with her early artistic expressions. 
 Whether it was crayons on paper or vibrant chalk on the sidewalk, it became clear that art was an innate part of who she is. <br />
 <br />

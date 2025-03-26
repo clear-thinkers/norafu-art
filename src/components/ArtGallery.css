@@ -38,6 +38,7 @@
   text-align: center;   /* Ensure text is centered */
   width: 100%;          /* Full width to force center alignment */
   font-family: 'Iansui', 'Roboto', sans-serif; 
+  color: var(--text-primary);
 }
 
 /* Year styling */
@@ -45,7 +46,7 @@
   font-size: 0.8rem;    /* Adjust the size as needed */
   margin-top: 0;        /* Remove extra space above the year */
   margin-bottom: 0;     /* Remove any extra margin below the year */
-  color: #666;          /* Optional: set a different color for the year */
+  color: var(--text-secondary);          /* Optional: set a different color for the year */
   text-align: center;   /* Ensure text is centered */
   width: 100%;          /* Full width to force center alignment */
   font-family: 'Iansui', 'Roboto', sans-serif; 

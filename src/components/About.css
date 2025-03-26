@@ -1,48 +1,51 @@
 /* About.css */
-
 .about-container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
+  background-color: var(--bg-primary);
+  border-radius: 8px;
 }
 
 .about-portrait {
   max-width: 50%;
   border-radius: 10px;
   margin-bottom: 20px;
+  border: 2px solid var(--border-color);
 }
 
 .fixed-height-portrait {
-  height: 150px; /* Set a fixed height of 300 pixels */
-  object-fit: cover; /* Ensures the image covers the entire area without distortion */
-  object-position: center; /* Centers the image within the fixed height */
-  width: 100%; /* Ensures the image spans the full width of its container */
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
 }
 
 h1 {
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 20px;
-  font-family: 'Iansui', 'Roboto', sans-serif; /* This adds the font change */
+  font-family: 'Iansui', 'Roboto', sans-serif;
 }
 
 h2 {
-  color: #666;
+  color: var(--text-secondary);
   margin-top: 30px;
-  font-family: 'Iansui', 'Roboto', sans-serif; /* This adds the font change */
+  font-family: 'Iansui', 'Roboto', sans-serif;
 }
 
 p {
   line-height: 1.6;
   text-align: left;
   margin-bottom: 15px;
-  width: 100%; /* Ensures the image spans the full width of its container */
-  font-family: 'Iansui', 'Roboto', sans-serif; /* This adds the font change */
+  width: 100%;
+  color: var(--text-primary);
+  font-family: 'Iansui', 'Roboto', sans-serif;
 }
 
 button {
-  background-color: #d3c0d2;
-  color: white;
+  background-color: var(--button-bg);
+  color: var(--button-text);
   border: none;
   padding: 10px 20px;
   text-align: center;
@@ -52,10 +55,11 @@ button {
   margin: 20px 0;
   cursor: pointer;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
-  font-family: 'Iansui', 'Roboto', sans-serif; /* This adds the font change */
+  transition: all 0.3s ease;
+  font-family: 'Iansui', 'Roboto', sans-serif;
 }
 
 button:hover {
-  background-color: #d3c0d2;
+  background-color: var(--button-hover);
+  transform: translateY(-2px);
 }
