@@ -1,6 +1,15 @@
 export const artworkData = [
   {
     id: 1,
+    title: 'self-portrait',
+    year: 2025,
+    medium: 'pencil & marker',
+    description: "this is my self-portrait. i don't look happy because i had a cold.",
+    imageSrc: `${process.env.PUBLIC_URL}/images/20250324_self-portrait.JPEG`,
+    tags: ['portrait', 'marker']
+  },
+  {
+    id: 2,
     title: 'sweet things in life',
     year: 2025,
     medium: 'pencil & marker',
@@ -9,7 +18,7 @@ export const artworkData = [
     tags: ['still life', 'marker']
   },
   {
-    id: 2,
+    id: 3,
     title: 'the itsy bitsy spider',
     year: 2025,
     medium: 'pencil & marker',

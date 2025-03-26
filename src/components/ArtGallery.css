@@ -26,6 +26,7 @@
   flex-direction: column; /* Stack items vertically */
   align-items: center;  /* Center items horizontally */
   width: 100%;          /* Ensure full width for proper centering */
+  cursor: pointer;
 }
 
 /* Title styling */
@@ -36,6 +37,7 @@
   font-weight: bold;    /* Optional: make the title bold */
   text-align: center;   /* Ensure text is centered */
   width: 100%;          /* Full width to force center alignment */
+  font-family: 'Iansui', 'Roboto', sans-serif; 
 }
 
 /* Year styling */
@@ -46,4 +48,5 @@
   color: #666;          /* Optional: set a different color for the year */
   text-align: center;   /* Ensure text is centered */
   width: 100%;          /* Full width to force center alignment */
+  font-family: 'Iansui', 'Roboto', sans-serif; 
 }
