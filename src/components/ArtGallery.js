@@ -1,23 +1,26 @@
-import React from 'react';
-import { artworkData, filterArtworks } from '../data/artworkData';
+import React, { useState } from 'react';
+import { artworkData, filterArtworks, getSortedArtworks } from '../data/artworkData';
 import './ArtGallery.css';
 
 const ArtGallery = ({ navigateTo, filter = {} }) => {
-  // Use the filter from props (default to empty object if not provided)
-  const filteredArtworks = filterArtworks(
-    artworkData,
-    filter.year,
-    filter.tags || []
-  );
+  // Use the new getSortedArtworks function
+  const sortedArtworks = getSortedArtworks(artworkData);
 
-  // Sort filteredArtworks by year in descending order (most recent first)
-  const sortedArtworks = [...filteredArtworks].sort((a, b) => b.year - a.year);
+  // Apply filters to the sorted artworks
+  const filteredArtworks = filterArtworks(
+    sortedArtworks,
+    filter.year,
+    filter.tags || [],
+    {
+      minPrice: filter.minPrice
+    }
+  );
 
   return (
     <div className="gallery-container">
       {/* Artwork Grid */}
       <div className="gallery-grid">
-        {sortedArtworks.map((artwork) => (
+        {filteredArtworks.map((artwork) => (
           <div
             key={artwork.id}
             className="gallery-item"
@@ -25,24 +28,24 @@ const ArtGallery = ({ navigateTo, filter = {} }) => {
           >
             <img
               src={artwork.imageSrc}
-              alt={artwork.title}
-              // Add loading and error handling
+              alt={artwork.title.eng}
               loading="lazy"
               onError={(e) => {
-                console.error(`Error loading image for ${artwork.title}`, e);
-                e.target.src = '/path/to/fallback/image.jpg'; // Optional fallback
+                console.error(`Error loading image for ${artwork.title.eng}`, e);
+                e.target.src = '/path/to/fallback/image.jpg';
               }}
             />
-            <div>
-              <h3>{artwork.title}</h3>
-              <p>{artwork.year}</p>
+            <div className="artwork-info">
+              <h3>{artwork.title.eng} | {artwork.title.ch}</h3>
+              <p>{artwork.date} | {artwork.medium}</p>
+              
             </div>
           </div>
         ))}
       </div>
 
       {/* No Artwork Found Message */}
-      {sortedArtworks.length === 0 && (
+      {filteredArtworks.length === 0 && (
         <div style={{ textAlign: 'center', color: '#888' }}>
           No artworks found matching the current filter.
         </div>

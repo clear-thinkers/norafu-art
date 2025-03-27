@@ -11,12 +11,12 @@ const ArtDetail = ({ artwork, navigateTo }) => {
 
       {/* Artwork Details */}
       <div className="art-detail-info">
-        <h1>{artwork.title}</h1>
+        <h1>{artwork.title.eng} | {artwork.title.ch}</h1>
         <div>
-          <p><strong>Year:</strong> {artwork.year}</p>
-          <p><strong>Medium:</strong> {artwork.medium}</p>
+          <p><strong>year:</strong> {artwork.year}</p>
+          <p><strong>medium:</strong> {artwork.medium}</p>
         </div>
-        <p>{artwork.description}</p>
+        <p>{artwork.description.eng} | {artwork.description.ch}</p>
         
         {/* Tags (if any) */}
         {artwork.tags && artwork.tags.length > 0 && (
