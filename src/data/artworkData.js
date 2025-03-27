@@ -389,6 +389,166 @@ export const artworkData = [
     },
     imageSrc: `${process.env.PUBLIC_URL}/images/20230311.JPEG`,
     tags: ['mermaid', 'fantasy', 'sea']
+  },
+  {
+    id: '20230204',
+    title: {
+      eng: 'sunflower',
+      ch: '向日葵'
+    },
+    date: '20230204',
+    year: 2023,
+    medium: 'marker',
+    description: {
+      eng: 'sunflowers blooming in the summer',
+      ch: '向日葵在夏天盛开着。'
+    },
+    imageSrc: `${process.env.PUBLIC_URL}/images/20230204.JPEG`,
+    tags: ['nature', 'flower']
+  },
+  {
+    id: '20230128',
+    title: {
+      eng: 'the bunny family',
+      ch: '兔子一家'
+    },
+    date: '20230128',
+    year: 2023,
+    medium: 'marker',
+    description: {
+      eng: 'the bunny family is going out for flower picking.',
+      ch: '兔子爸爸，兔子妈妈，兔子姐姐和兔子宝宝出门去摘花。'
+    },
+    imageSrc: `${process.env.PUBLIC_URL}/images/20230128.JPEG`,
+    tags: ['animal', 'fantasy', 'family']
+  },
+  {
+    id: '20221015',
+    title: {
+      eng: 'the weird skeleton heads',
+      ch: '奇怪的骷髅头'
+    },
+    date: '20221015',
+    year: 2022,
+    medium: 'marker',
+    description: {
+      eng: 'the skeletons are having a party.',
+      ch: '骷髅头开派对。'
+    },
+    imageSrc: `${process.env.PUBLIC_URL}/images/20221015.JPEG`,
+    tags: ['Jean-Michel Basquiat', 'Graffiti']
+  },
+  {
+    id: '20221009',
+    title: {
+      eng: 'mice eating pumpkins',
+      ch: '老鼠吃南瓜'
+    },
+    date: '20221009',
+    year: 2022,
+    medium: 'marker',
+    description: {
+      eng: 'mice are happy because they have lots of pumpkins to eat.',
+      ch: '老鼠们很开心，它们有好多南瓜可以吃。'
+    },
+    imageSrc: `${process.env.PUBLIC_URL}/images/20221009.JPEG`,
+    tags: ['animal', 'fantasy']
+  },
+  {
+    id: '20220918',
+    title: {
+      eng: 'mushroom house',
+      ch: '蘑菇屋'
+    },
+    date: '20220918',
+    year: 2022,
+    medium: 'marker',
+    description: {
+      eng: 'i\'m hanging clothes in front of my mushroom house.',
+      ch: '我在我的蘑菇屋前晾衣服。'
+    },
+    imageSrc: `${process.env.PUBLIC_URL}/images/20220918.JPEG`,
+    tags: ['fantasy']
+  },
+  {
+    id: '20220807',
+    title: {
+      eng: 'hamburger',
+      ch: '汉堡包'
+    },
+    date: '20220807',
+    year: 2022,
+    medium: 'marker',
+    description: {
+      eng: 'three hamburgers. one for dad, one for mom and one for me.',
+      ch: '一人一个汉堡包。'
+    },
+    imageSrc: `${process.env.PUBLIC_URL}/images/20220807.JPEG`,
+    tags: ['food', 'family']
+  },
+  {
+    id: '20220724',
+    title: {
+      eng: 'banana ballerinas',
+      ch: '香蕉跳芭蕾舞'
+    },
+    date: '20220724',
+    year: 2022,
+    medium: 'marker',
+    description: {
+      eng: 'there are three banana ballerinas. one of them fell, and two ran to help.',
+      ch: '有一只摔倒了，另外两只去帮忙。'
+    },
+    imageSrc: `${process.env.PUBLIC_URL}/images/20220724.JPEG`,
+    tags: ['fantasy', 'friends']
+  },
+  {
+    id: '20210427',
+    title: {
+      eng: 'nora on the swing',
+      ch: '荡秋千的瓜瓜'
+    },
+    date: '20210427',
+    year: 2021,
+    medium: 'marker',
+    description: {
+      eng: "I'm swinging. (drew at 33 months) ",
+      ch: '我在荡秋千。'
+    },
+    imageSrc: `${process.env.PUBLIC_URL}/images/20210427.JPEG`,
+    tags: ['portrait', 'toddler art']
+  },
+  {
+      id: '20210301',
+      title: {
+        eng: 'dancer',
+        ch: '舞者'
+      },
+      date: '20210301',
+      year: 2021,
+      medium: 'marker',
+      description: {
+        eng: "she's dancing. (drew at 31 months) ",
+        ch: '她在跳舞。'
+      },
+    imageSrc: `${process.env.PUBLIC_URL}/images/20210301.JPEG`,
+    tags: ['portrait', 'toddler art']
+  },
+  {
+    id: '20200930',
+    title: {
+      eng: 'penguin',
+      ch: '企鹅'
+    },
+    date: '20200930',
+    year: 2021,
+    medium: 'marker',
+    description: {
+      eng: "my penguin toy. (drew at 26 months) ",
+      ch: '我的企鹅玩偶。'
+    },
+  imageSrc: `${process.env.PUBLIC_URL}/images/20200930.JPEG`,
+  tags: ['toddler art']
   }
   // ... continue adding more artworks from the dataset
   // Remember to add the full list of artworks from the provided text file
