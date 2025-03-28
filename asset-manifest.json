@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/norafu-art/static/css/main.e427c57f.css",
-    "main.js": "/norafu-art/static/js/main.feca0a63.js",
+    "main.css": "/norafu-art/static/css/main.5d69400d.css",
+    "main.js": "/norafu-art/static/js/main.a7f2ad8e.js",
     "static/js/453.a59e1ba8.chunk.js": "/norafu-art/static/js/453.a59e1ba8.chunk.js",
     "index.html": "/norafu-art/index.html",
-    "main.e427c57f.css.map": "/norafu-art/static/css/main.e427c57f.css.map",
-    "main.feca0a63.js.map": "/norafu-art/static/js/main.feca0a63.js.map",
+    "main.5d69400d.css.map": "/norafu-art/static/css/main.5d69400d.css.map",
+    "main.a7f2ad8e.js.map": "/norafu-art/static/js/main.a7f2ad8e.js.map",
     "453.a59e1ba8.chunk.js.map": "/norafu-art/static/js/453.a59e1ba8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e427c57f.css",
-    "static/js/main.feca0a63.js"
+    "static/css/main.5d69400d.css",
+    "static/js/main.a7f2ad8e.js"
   ]
 }
