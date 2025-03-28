@@ -1,5 +1,37 @@
 export const artworkData = [
   {
+    id: '20250327_02',
+    title: {
+      eng: 'black bottles and brown bottles',
+      ch: '黑瓶子棕瓶子'
+    },
+    date: '20250327',
+    year: 2025,
+    medium: 'marker',
+    description: {
+      eng: 'different bottles are waiting for different flower friends.',
+      ch: '瓶子们在等花儿朋友们来。'
+    },
+    imageSrc: `${process.env.PUBLIC_URL}/images/20250327_02.JPEG`,
+    tags: ['still life']
+  },
+  {
+    id: '20250327_01',
+    title: {
+      eng: 'big fish are hunting small fish',
+      ch: '大鱼吃小鱼'
+    },
+    date: '20250327',
+    year: 2025,
+    medium: 'marker',
+    description: {
+      eng: 'the whale and the anglerfish are waiting for small fish to slow down.',
+      ch: '鲸鱼和安康鱼在等待机会吃小鱼。'
+    },
+    imageSrc: `${process.env.PUBLIC_URL}/images/20250327_01.JPEG`,
+    tags: ['animal', 'fantasy']
+  },
+  {
     id: '20250324_self-portrait',
     title: {
       eng: 'self-portrait',
@@ -15,6 +47,22 @@ export const artworkData = [
     imageSrc: `${process.env.PUBLIC_URL}/images/20250324_self-portrait.JPEG`,
     tags: ['portrait']
 
+  },
+  {
+    id: '20250322',
+    title: {
+      eng: 'fruit on the table',
+      ch: '桌子上的水果'
+    },
+    date: '20250322',
+    year: 2025,
+    medium: 'marker',
+    description: {
+      eng: 'kiwi, orange, apple and cherries are happily waiting for someone to eat them.',
+      ch: '猕猴桃，橙子，苹果还有樱桃开心地等着被吃掉。'
+    },
+    imageSrc: `${process.env.PUBLIC_URL}/images/20250322.JPEG`,
+    tags: ['still life', 'food']
   },
   {
     id: '20250324',
@@ -541,7 +589,7 @@ export const artworkData = [
       ch: '企鹅'
     },
     date: '20200930',
-    year: 2021,
+    year: 2020,
     medium: 'marker',
     description: {
       eng: "my penguin toy. (drew at 26 months) ",
