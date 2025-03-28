@@ -560,7 +560,7 @@ export const artworkData = [
     year: 2021,
     medium: 'marker',
     description: {
-      eng: "I'm swinging. (drew at 33 months) ",
+      eng: "I'm swinging.",
       ch: '我在荡秋千。'
     },
     imageSrc: `${process.env.PUBLIC_URL}/images/20210427.JPEG`,
@@ -576,7 +576,7 @@ export const artworkData = [
       year: 2021,
       medium: 'marker',
       description: {
-        eng: "she's dancing. (drew at 31 months) ",
+        eng: "she's dancing.",
         ch: '她在跳舞。'
       },
     imageSrc: `${process.env.PUBLIC_URL}/images/20210301.JPEG`,
@@ -592,7 +592,7 @@ export const artworkData = [
     year: 2020,
     medium: 'marker',
     description: {
-      eng: "my penguin toy. (drew at 26 months) ",
+      eng: "my penguin toy.",
       ch: '我的企鹅玩偶。'
     },
   imageSrc: `${process.env.PUBLIC_URL}/images/20200930.JPEG`,

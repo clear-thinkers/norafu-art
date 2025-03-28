@@ -1,8 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { artworkData, filterArtworks, getSortedArtworks } from '../data/artworkData';
 import './ArtGallery.css';
 
-const ArtGallery = ({ navigateTo, filter = {} }) => {
+const ArtGallery = ({ 
+  navigateTo, 
+  filter = {}, 
+  scrollPosition = 0,
+  onScrollPositionChange 
+}) => {
+  const galleryRef = useRef(null);
+
   // Use the new getSortedArtworks function
   const sortedArtworks = getSortedArtworks(artworkData);
 
@@ -16,8 +23,26 @@ const ArtGallery = ({ navigateTo, filter = {} }) => {
     }
   );
 
+  // Restore scroll position when component mounts or updates
+  useEffect(() => {
+    if (galleryRef.current && scrollPosition > 0) {
+      galleryRef.current.scrollTop = scrollPosition;
+    }
+  }, [scrollPosition]);
+
+  // Track scroll position when scrolling
+  const handleScroll = (e) => {
+    if (onScrollPositionChange) {
+      onScrollPositionChange(e.target.scrollTop);
+    }
+  };
+
   return (
-    <div className="gallery-container">
+    <div 
+      ref={galleryRef}
+      className="gallery-container"
+      onScroll={handleScroll}
+    >
       {/* Artwork Grid */}
       <div className="gallery-grid">
         {filteredArtworks.map((artwork) => (
@@ -37,8 +62,7 @@ const ArtGallery = ({ navigateTo, filter = {} }) => {
             />
             <div className="artwork-info">
               <h3>{artwork.title.eng} | {artwork.title.ch}</h3>
-              <p>{artwork.date} | {artwork.medium}</p>
-              
+              <p>{artwork.date} | {artwork.medium} </p>
             </div>
           </div>
         ))}
