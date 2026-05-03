@@ -6,7 +6,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "deploy": "npm run build && gh-pages -d dist -b main",
+    "deploy": "npm run build && gh-pages -d dist -b main --dotfiles",
     "add": "node scripts/add-from-csv.mjs",
     "update": "node scripts/add-from-csv.mjs --update"
   },
