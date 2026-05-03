@@ -1,0 +1,18 @@
+{
+  "title": {
+    "eng": "easter bunny",
+    "ch": "复活节小兔"
+  },
+  "date": "20230401",
+  "year": 2023,
+  "medium": "marker",
+  "description": {
+    "eng": "easter bunny giving eggs",
+    "ch": "复活节小兔在分发彩蛋。"
+  },
+  "imageSrc": "20230401.JPEG",
+  "tags": [
+    "easter",
+    "fantasy"
+  ]
+}

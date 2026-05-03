@@ -1,0 +1,62 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import profileImg from '../../assets/images/profile.JPG';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="关于 — 瓜瓜的画"
+  description="关于艺术家诺拉·傅，2018年出生。"
+  locale="zh"
+>
+  <Navbar activePage="about" locale="zh" />
+
+  <div class="about-container">
+    <h1>关于诺拉</h1>
+
+    <Image
+      src={profileImg}
+      alt="艺术家肖像"
+      width={400}
+      class="about-portrait"
+    />
+
+    <p>
+      诺拉于2018年出生，从很小的时候就对艺术产生了浓厚的兴趣。
+      在她仅有18个月大的时候，便展现出对颜色和绘画的强烈热情，
+      用蜡笔和粉笔创作出令家人着迷的早期艺术作品。
+    </p>
+
+    <p>
+      随着诺拉不断成长，她的艺术才华也日益绽放。
+      自幼儿园起，她就是班上公认的"小艺术家"，
+      以独特的创意和细腻的观察力脱颖而出。
+      艺术对她来说不只是一门课程，而是生活的一部分。
+    </p>
+
+    <p>
+      四岁时，诺拉开始在 Y School of Arts 参加正式绘画课，一直坚持至今。
+      这段学习经历让她得以探索各种技法与媒材，不断精进技艺，
+      同时保持着对创作发自内心的热爱。
+      每一幅新作品都是她天马行空的想象力、活泼而认真的性格，
+      以及通过艺术探索世界的快乐的真实写照。
+    </p>
+
+    <p>
+      诺拉目前就读于宾夕法尼亚州阿勒格尼县英高玛小学一年级。
+    </p>
+
+    <a href={`${base}zh/`} class="button">查看作品</a>
+
+    <div class="contact-section">
+      <h2>联系我们</h2>
+      <p class="contact-description">关于艺术作品、印刷品或展览的咨询：</p>
+      <a href="mailto:czhou2023@gmail.com" class="contact-email">
+        czhou2023@gmail.com
+      </a>
+    </div>
+  </div>
+</BaseLayout>

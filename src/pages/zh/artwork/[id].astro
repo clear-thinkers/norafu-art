@@ -1,0 +1,15 @@
+---
+import { getCollection } from 'astro:content';
+import ArtworkDetail from '../../../components/ArtworkDetail.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('artworks');
+  return entries.map((entry) => ({
+    params: { id: entry.id },
+    props: { artwork: { id: entry.id, ...entry.data } },
+  }));
+}
+
+const { artwork } = Astro.props;
+---
+<ArtworkDetail artwork={artwork} locale="zh" />

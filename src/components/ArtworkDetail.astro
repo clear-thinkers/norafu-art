@@ -1,0 +1,109 @@
+---
+import { Image, getImage } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from './Navbar.astro';
+import { artworkImages } from '../assets/images/index.js';
+import { calculateNoraAge } from '../utils/ageCalculation.js';
+
+interface Props {
+  artwork: {
+    id: string;
+    title: { eng: string; ch: string };
+    date: string;
+    year: number;
+    medium: string;
+    description: { eng: string; ch: string };
+    imageSrc: string;
+    tags: string[];
+  };
+  locale?: 'en' | 'zh';
+}
+
+const { artwork, locale = 'en' } = Astro.props;
+const isZh = locale === 'zh';
+const base = import.meta.env.BASE_URL;
+
+const age = calculateNoraAge(artwork.year);
+const ageDescription = age >= 0
+  ? (isZh ? `${age}岁` : `${age} year${age === 1 ? '' : 's'} old`)
+  : null;
+
+const imgSrc = artworkImages[`./${artwork.imageSrc}`]?.default;
+const ogImageResult = imgSrc
+  ? await getImage({ src: imgSrc, format: 'jpeg', width: 1200 })
+  : null;
+const ogImageUrl = ogImageResult
+  ? new URL(ogImageResult.src, Astro.site).href
+  : undefined;
+
+const displayTitle = isZh ? artwork.title.ch : artwork.title.eng;
+const displayDescription = isZh ? artwork.description.ch : artwork.description.eng;
+const pageTitle = isZh
+  ? `${artwork.title.ch} — 瓜瓜的画`
+  : `${artwork.title.eng} — Nora Fu's Art`;
+const backUrl = isZh ? `${base}zh/` : base;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'VisualArtwork',
+  name: artwork.title.eng,
+  alternateName: artwork.title.ch,
+  description: artwork.description.eng,
+  dateCreated: `${artwork.date.slice(0, 4)}-${artwork.date.slice(4, 6)}-${artwork.date.slice(6, 8)}`,
+  artMedium: artwork.medium,
+  image: ogImageUrl,
+  author: {
+    '@type': 'Person',
+    name: 'Nora Fu',
+    birthDate: '2018',
+  },
+};
+---
+
+<BaseLayout title={pageTitle} description={displayDescription} ogImage={ogImageUrl} locale={locale}>
+  <Navbar activePage="gallery" locale={locale} />
+  <div class="art-detail-container">
+    <div class="art-detail-image">
+      {imgSrc ? (
+        <Image
+          src={imgSrc}
+          alt={artwork.title.eng}
+          width={1200}
+          loading="eager"
+          transition:name={`artwork-${artwork.id}`}
+        />
+      ) : (
+        <img
+          src={`${base}images/${artwork.imageSrc}`}
+          alt={artwork.title.eng}
+        />
+      )}
+    </div>
+
+    <div class="art-detail-info">
+      <h1>{displayTitle}</h1>
+
+      <p><strong>{isZh ? '年份' : 'year'}:</strong> {artwork.year}</p>
+      <p>
+        <strong>{isZh ? '媒介' : 'medium & age'}:</strong> {artwork.medium}
+        {ageDescription && (
+          <span class="nora-age-description"> ({ageDescription})</span>
+        )}
+      </p>
+
+      <p>{displayDescription}</p>
+
+      {artwork.tags?.length > 0 && (
+        <div class="art-detail-tags">
+          {artwork.tags.map((tag) => (
+            <span class="art-tag">{tag}</span>
+          ))}
+        </div>
+      )}
+
+      <a href={backUrl} class="back-button">← {isZh ? '返回画廊' : 'Back to Gallery'}</a>
+    </div>
+  </div>
+
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+</BaseLayout>

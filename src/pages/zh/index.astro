@@ -1,0 +1,18 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import ArtCard from '../../components/ArtCard.astro';
+
+const entries = await getCollection('artworks');
+const artworks = entries
+  .map((e) => ({ id: e.id, ...e.data }))
+  .sort((a, b) => parseInt(b.date) - parseInt(a.date));
+---
+
+<BaseLayout title="瓜瓜的画 | Nora Fu's Art" locale="zh">
+  <Navbar activePage="gallery" locale="zh" />
+  <div class="gallery-container">
+    {artworks.map((artwork) => <ArtCard artwork={artwork} locale="zh" />)}
+  </div>
+</BaseLayout>

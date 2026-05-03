@@ -1,0 +1,17 @@
+{
+  "title": {
+    "eng": "the itsy bitsy spider",
+    "ch": "蜘蛛织网"
+  },
+  "date": "20250315",
+  "year": 2025,
+  "medium": "marker",
+  "description": {
+    "eng": "an eight-legged spider busy spinning her web.",
+    "ch": "八条腿的小蜘蛛正在角落里忙碌地织网。"
+  },
+  "imageSrc": "20250315.JPG",
+  "tags": [
+    "animal"
+  ]
+}

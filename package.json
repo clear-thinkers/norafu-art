@@ -1,0 +1,18 @@
+{
+  "name": "norafu-art",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "dependencies": {
+    "@astrojs/rss": "^4.0.18",
+    "astro": "^4.16.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}

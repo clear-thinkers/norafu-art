@@ -1,0 +1,18 @@
+{
+  "title": {
+    "eng": "exploding volcano",
+    "ch": "火山喷发"
+  },
+  "date": "20240201",
+  "year": 2024,
+  "medium": "marker",
+  "description": {
+    "eng": "the volcano is going to explode in 10 seconds, and the dinosaur will be extinct.",
+    "ch": "火山10秒后就要喷发，然后恐龙就灭绝了。"
+  },
+  "imageSrc": "20240201.JPEG",
+  "tags": [
+    "dinosaur",
+    "volcano"
+  ]
+}

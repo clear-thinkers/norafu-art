@@ -1,0 +1,17 @@
+{
+  "title": {
+    "eng": "the owl",
+    "ch": "猫头鹰"
+  },
+  "date": "20241101",
+  "year": 2024,
+  "medium": "watercolor",
+  "description": {
+    "eng": "an owl flying over the sea to get fish",
+    "ch": "猫头鹰在大海上飞行，找鱼吃。"
+  },
+  "imageSrc": "20241101.JPEG",
+  "tags": [
+    "animal"
+  ]
+}

@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import ArtCard from '../../components/ArtCard.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('artworks');
+  const years = [...new Set(entries.map((e) => e.data.year))];
+  return years.map((year) => ({
+    params: { year: String(year) },
+    props: { year },
+  }));
+}
+
+const { year } = Astro.props;
+const entries = await getCollection('artworks');
+const artworks = entries
+  .map((e) => ({ id: e.id, ...e.data }))
+  .filter((a) => a.year === year)
+  .sort((a, b) => parseInt(b.date) - parseInt(a.date));
+---
+
+<BaseLayout title={`${year} — Nora Fu's Art`}>
+  <Navbar activePage="gallery" activeYear={year} />
+  <div class="gallery-container">
+    {artworks.map((artwork) => <ArtCard artwork={artwork} />)}
+  </div>
+</BaseLayout>

@@ -1,0 +1,40 @@
+---
+import { Image } from 'astro:assets';
+import { artworkImages } from '../assets/images/index.js';
+
+interface Props {
+  artwork: any;
+  locale?: 'en' | 'zh';
+}
+
+const { artwork, locale = 'en' } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const imgSrc = artworkImages[`./${artwork.imageSrc}`]?.default;
+const isZh = locale === 'zh';
+const title = isZh ? artwork.title.ch : artwork.title.eng;
+const localePath = isZh ? `${base}zh/` : base;
+---
+
+<a href={`${localePath}artwork/${artwork.id}`} class="gallery-item">
+  {imgSrc ? (
+    <Image
+      src={imgSrc}
+      alt={artwork.title.eng}
+      width={600}
+      loading="lazy"
+      class="gallery-thumb"
+      transition:name={`artwork-${artwork.id}`}
+    />
+  ) : (
+    <img
+      src={`${base}images/${artwork.imageSrc}`}
+      alt={artwork.title.eng}
+      loading="lazy"
+      class="gallery-thumb"
+    />
+  )}
+  <div class="artwork-info">
+    <h3>{title}</h3>
+    <p>{artwork.date} | {artwork.medium}</p>
+  </div>
+</a>

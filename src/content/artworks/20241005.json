@@ -1,0 +1,17 @@
+{
+  "title": {
+    "eng": "neighborhood",
+    "ch": "街景"
+  },
+  "date": "20241005",
+  "year": 2024,
+  "medium": "marker",
+  "description": {
+    "eng": "street houses near my art classroom",
+    "ch": "我画了我的画画教室对面的街景。"
+  },
+  "imageSrc": "20241005.JPEG",
+  "tags": [
+    "urban sketching"
+  ]
+}

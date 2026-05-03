@@ -1,0 +1,18 @@
+{
+  "title": {
+    "eng": "three little pigs",
+    "ch": "三只小猪"
+  },
+  "date": "20230722",
+  "year": 2023,
+  "medium": "marker",
+  "description": {
+    "eng": "daddy pig brings food to mommy pig and the three little brothers.",
+    "ch": "猪爸爸端来吃的给猪妈妈和小猪们吃。"
+  },
+  "imageSrc": "20230722.JPEG",
+  "tags": [
+    "animal",
+    "fantasy"
+  ]
+}

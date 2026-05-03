@@ -1,0 +1,17 @@
+{
+  "title": {
+    "eng": "self-portrait",
+    "ch": "我的自画像"
+  },
+  "date": "20250324",
+  "year": 2025,
+  "medium": "marker",
+  "description": {
+    "eng": "this is my self-portrait. i don't look happy because i have a cold.",
+    "ch": "感冒了，画里的我看起来有点没精神。"
+  },
+  "imageSrc": "20250324_self-portrait.JPEG",
+  "tags": [
+    "portrait"
+  ]
+}

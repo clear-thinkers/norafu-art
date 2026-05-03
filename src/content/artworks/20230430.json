@@ -1,0 +1,17 @@
+{
+  "title": {
+    "eng": "self-portrait",
+    "ch": "蓝头发的我"
+  },
+  "date": "20230430",
+  "year": 2023,
+  "medium": "marker",
+  "description": {
+    "eng": "this is me wearing my pink glasses and purple sweatshirt. and i dyed my hair blue.",
+    "ch": "我戴着粉色眼镜，穿着紫色上衣，头发染成了蓝色。"
+  },
+  "imageSrc": "20230430.JPEG",
+  "tags": [
+    "portrait"
+  ]
+}

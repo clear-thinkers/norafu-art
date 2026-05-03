@@ -1,0 +1,19 @@
+{
+  "title": {
+    "eng": "the starry night",
+    "ch": "流动的夜空"
+  },
+  "date": "20250208",
+  "year": 2025,
+  "medium": "marker",
+  "description": {
+    "eng": "a dragon lives in the black castle. at night, he feels lonely and uses magic to make the sky flow like a river.",
+    "ch": "住在黑城堡的龙有点寂寞，于是它用魔法让天空像河流一样闪闪发光。"
+  },
+  "imageSrc": "20250208.JPEG",
+  "tags": [
+    "van gogh",
+    "night sky",
+    "fantasy"
+  ]
+}
