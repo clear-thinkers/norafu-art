@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git clone *)",
+      "PowerShell(git clone https://github.com/clear-thinkers/norafu-art \"c:\\\\Users\\\\alexi\\\\coding\\\\_norafu_temp\" 2>&1)",
+      "PowerShell(Get-ChildItem -Force \"c:\\\\Users\\\\alexi\\\\coding\\\\_norafu_temp\" | ForEach-Object { Move-Item $_.FullName \"c:\\\\Users\\\\alexi\\\\coding\\\\norafu-art\\\\\" -Force }; Remove-Item \"c:\\\\Users\\\\alexi\\\\coding\\\\_norafu_temp\" -Force -Recurse)"
+    ]
+  }
+}
