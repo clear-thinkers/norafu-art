@@ -42,33 +42,6 @@ Astro is purpose-built for content-heavy, mostly-static, image-heavy sites.
 
 Replace CRA with Astro. Maintain all existing content and visual design.
 
-```
-src/
-├── data/
-│   └── artworkData.js          ← existing data, process.env.PUBLIC_URL removed
-├── utils/
-│   └── ageCalculation.js       ← moved from components/
-├── styles/
-│   └── global.css              ← merged from all component CSS files
-├── layouts/
-│   └── BaseLayout.astro        ← HTML shell, meta tags, font
-├── components/
-│   ├── Navbar.astro            ← static nav, year links instead of buttons
-│   └── ArtCard.astro           ← artwork card (now a real <a> link)
-└── pages/
-    ├── index.astro             ← gallery (all years)
-    ├── about.astro             ← about page
-    ├── artwork/
-    │   └── [id].astro          ← artwork detail (one static page per artwork)
-    └── year/
-        └── [year].astro        ← year-filtered gallery (one static page per year)
-public/
-├── images/                     ← moved from root /images/
-├── favicon.ico
-├── manifest.json               ← updated from CRA defaults
-└── robots.txt
-```
-
 **Key improvements over the SPA:**
 - Each artwork has a real URL: `/artwork/20250327_02`
 - Year filter is pre-rendered static pages: `/year/2025`, `/year/2024`, etc.
@@ -86,9 +59,9 @@ Replace raw `<img>` tags with Astro's `<Image>` component.
 
 **What was done:**
 - Moved `public/images/` → `src/assets/images/` (into Astro's build pipeline)
-- Created `src/assets/images/index.js` — `import.meta.glob` registry of all 54 images
+- Created `src/assets/images/index.js` — `import.meta.glob` registry of all images
 - `ArtCard.astro` uses `<Image width={600}>` → lazy-loaded WebP gallery thumbnails
-- `artwork/[id].astro` uses `<Image width={1200}>` + `getImage()` for `og:image`
+- `ArtworkDetail.astro` uses `<Image width={1200}>` + `getImage()` for `og:image`
 - `about.astro` uses direct static import + `<Image width={400}>` for profile photo
 - Gallery CSS updated to `height: 280px; object-fit: cover` for consistent card heights
 
@@ -108,20 +81,87 @@ Replace raw `<img>` tags with Astro's `<Image>` component.
 
 ## Phase 3 — Content Collections ✅ Complete
 
-Replace `src/data/artworkData.js` with Astro Content Collections:
+Replace `src/data/artworkData.js` with Astro Content Collections.
 
-- `src/content/artworks/[id].json` — one file per artwork
-- `src/content/config.ts` — Zod schema for type safety
-- Adding new artwork = drop a JSON + image, no JS array editing
+**What was done:**
+- Created `src/content/config.ts` — Zod schema for type safety
+- Generated `src/content/artworks/[id].json` — one file per artwork (42 files)
+- Deleted `src/data/artworkData.js`
+- All pages updated to use `getCollection('artworks')`
+- Fixed `base: '/norafu-art/'` trailing slash (was causing malformed hrefs)
 
-Optionally wire up **Decap CMS** (free, GitHub-backed) for browser-based editing.
+**Adding a new artwork** = drop a `.json` into `src/content/artworks/` and an image into
+`src/assets/images/`. The filename becomes the URL slug. Zod validates the shape at build time.
 
 ---
 
 ## Phase 4 — Polish ✅ Complete
 
-- Bilingual URL routing (`/zh/`, `/en/`) via Astro i18n — EN at root, ZH at `/zh/`; EN↔ZH switcher in navbar
-- View Transitions API for smooth gallery → detail animation — image morphs between card and detail view
-- RSS feed of new artworks — `/rss.xml`, autodiscovery link in `<head>`
-- `application/ld+json` ArtWork structured data for Google — per-artwork `VisualArtwork` schema
-- PWA manifest with correct app name and theme color — `start_url` fixed to `/norafu-art/`
+- **Bilingual URL routing** via Astro i18n — EN at root (`/`, `/artwork/...`), ZH at `/zh/`, `/zh/artwork/...`; EN↔ZH switcher in navbar links between equivalent pages
+- **View Transitions API** — `<ViewTransitions />` in BaseLayout; `transition:name="artwork-{id}"` on gallery thumbnails and detail images creates a smooth morph animation
+- **RSS feed** — `/rss.xml` with 42 items sorted newest-first; autodiscovery `<link>` in every page `<head>`
+- **`application/ld+json` structured data** — per-artwork `VisualArtwork` schema (name, date, medium, image, author) on all detail pages
+- **PWA manifest** — `start_url` corrected to `/norafu-art/`
+
+---
+
+## Current Architecture
+
+### File tree
+
+```
+src/
+├── assets/images/          ← 56 source images (JPEG/JPG); build produces WebP variants
+│   └── index.js            ← import.meta.glob registry
+├── components/
+│   ├── ArtCard.astro       ← gallery card; locale prop selects EN/ZH title
+│   ├── ArtworkDetail.astro ← shared detail template (EN + ZH pages both use this)
+│   └── Navbar.astro        ← nav with year filter + EN|中文 language switcher
+├── content/
+│   ├── config.ts           ← Zod schema for artworks collection
+│   └── artworks/           ← 42 × [id].json (one per artwork)
+├── layouts/
+│   └── BaseLayout.astro    ← HTML shell; ViewTransitions; RSS autodiscovery
+├── pages/
+│   ├── index.astro         ← EN gallery (all years)
+│   ├── about.astro         ← EN about page
+│   ├── rss.xml.js          ← RSS feed endpoint
+│   ├── artwork/[id].astro  ← EN detail (42 static pages)
+│   ├── year/[year].astro   ← EN year-filtered gallery (6 static pages)
+│   └── zh/
+│       ├── index.astro     ← ZH gallery
+│       ├── about.astro     ← ZH about page
+│       ├── artwork/[id].astro ← ZH detail (42 static pages)
+│       └── year/[year].astro  ← ZH year-filtered gallery (6 static pages)
+├── styles/
+│   └── global.css
+└── utils/
+    └── ageCalculation.js   ← "created at X years old" label
+public/
+├── favicon.ico
+├── manifest.json           ← PWA; start_url: /norafu-art/
+└── robots.txt
+```
+
+### Build output
+
+| Metric | Value |
+|--------|-------|
+| Total static pages | 100 (50 EN + 50 ZH) |
+| Image variants | 127 WebP/JPEG generated at build time |
+| JS sent to browser | ~14 kB (View Transitions runtime only) |
+| RSS items | 42 |
+
+### URL structure
+
+| Route | Description |
+|-------|-------------|
+| `/norafu-art/` | EN gallery |
+| `/norafu-art/artwork/:id` | EN artwork detail |
+| `/norafu-art/year/:year` | EN year filter |
+| `/norafu-art/about` | EN about |
+| `/norafu-art/zh/` | ZH gallery |
+| `/norafu-art/zh/artwork/:id` | ZH artwork detail |
+| `/norafu-art/zh/year/:year` | ZH year filter |
+| `/norafu-art/zh/about` | ZH about |
+| `/norafu-art/rss.xml` | RSS feed |

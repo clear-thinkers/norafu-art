@@ -1,0 +1,19 @@
+{
+  "title": {
+    "eng": "snail's beach time",
+    "ch": "蜗牛的海滩时光"
+  },
+  "date": "20250907",
+  "year": 2025,
+  "medium": "marker",
+  "description": {
+    "eng": "the snail is having a relaxing time on a beautiful island.",
+    "ch": "蜗牛享受着它的海滩慢时光。"
+  },
+  "imageSrc": "20250907.JPEG",
+  "tags": [
+    "nature",
+    "sea",
+    "animal"
+  ]
+}
