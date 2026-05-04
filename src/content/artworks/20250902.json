@@ -1,0 +1,18 @@
+{
+  "title": {
+    "eng": "fruit juice maker",
+    "ch": "水果榨汁机"
+  },
+  "date": "20250902",
+  "year": 2025,
+  "medium": "marker",
+  "description": {
+    "eng": "A fruit juice machine is making drinks with happy fruit friends.",
+    "ch": "水果朋友们和水果榨汁机。"
+  },
+  "imageSrc": "20250902.JPEG",
+  "tags": [
+    "food",
+    "fantasy"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "title": {
+    "eng": "nora's name",
+    "ch": "Nora的名字"
+  },
+  "date": "20260404",
+  "year": 2026,
+  "medium": "marker",
+  "description": {
+    "eng": "I decorated my name. It smells chocolate.",
+    "ch": "我装饰了我的名字。它闻起来是巧克力甜甜圈的味道。"
+  },
+  "imageSrc": "20260404.JPEG",
+  "tags": [
+    "design",
+    "fantasy"
+  ]
+}

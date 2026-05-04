@@ -1,0 +1,19 @@
+{
+  "title": {
+    "eng": "elephant chef",
+    "ch": "大象厨师"
+  },
+  "date": "20251031",
+  "year": 2025,
+  "medium": "marker",
+  "description": {
+    "eng": "An elephant chef made a pumpkin pie for Thanksgiving.",
+    "ch": "大象厨师烤了一个南瓜派。笨拙的它还打碎了一个鸡蛋。"
+  },
+  "imageSrc": "20251031.JPEG",
+  "tags": [
+    "animal",
+    "food",
+    "fantasy"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "title": {
+    "eng": "jellyfish",
+    "ch": "水母"
+  },
+  "date": "20260111",
+  "year": 2026,
+  "medium": "watercolor",
+  "description": {
+    "eng": "Purple jellyfish drift through the water.",
+    "ch": "粉紫色的水母在水里慢慢漂着。"
+  },
+  "imageSrc": "20260111.JPEG",
+  "tags": [
+    "sea",
+    "animal"
+  ]
+}

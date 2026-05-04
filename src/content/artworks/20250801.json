@@ -1,0 +1,18 @@
+{
+  "title": {
+    "eng": "charmander party",
+    "ch": "小火龙派对"
+  },
+  "date": "20250801",
+  "year": 2025,
+  "medium": "marker",
+  "description": {
+    "eng": "Charmander is ready for a party!",
+    "ch": "小火龙举着气球正要去参加派对。"
+  },
+  "imageSrc": "20250801.JPEG",
+  "tags": [
+    "fantasy",
+    "animal"
+  ]
+}

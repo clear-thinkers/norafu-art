@@ -1,0 +1,18 @@
+{
+  "title": {
+    "eng": "whale",
+    "ch": "鲸鱼"
+  },
+  "date": "20260117",
+  "year": 2026,
+  "medium": "watercolor",
+  "description": {
+    "eng": "A blue whale swims with jellyfish and sea plants.",
+    "ch": "蓝色鲸鱼和水母、海草一起在海里游。"
+  },
+  "imageSrc": "20260117.JPEG",
+  "tags": [
+    "sea",
+    "animal"
+  ]
+}

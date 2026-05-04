@@ -1,0 +1,18 @@
+{
+  "title": {
+    "eng": "cake for you",
+    "ch": "一块蛋糕"
+  },
+  "date": "20260301",
+  "year": 2026,
+  "medium": "marker",
+  "description": {
+    "eng": "A slice of cake sits on a plate.",
+    "ch": "这是我为你准备的蛋糕。"
+  },
+  "imageSrc": "20260301.JPEG",
+  "tags": [
+    "food",
+    "still life"
+  ]
+}

@@ -101,9 +101,20 @@ const jsonLd = {
         </div>
       )}
 
-      <a href={backUrl} class="back-button">← {isZh ? '返回画廊' : 'Back to Gallery'}</a>
+      <a href={backUrl} class="back-button" id="back-btn">← {isZh ? '返回画廊' : 'Back to Gallery'}</a>
     </div>
   </div>
 
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <script>
+    document.addEventListener('astro:page-load', () => {
+      document.getElementById('back-btn')?.addEventListener('click', (e) => {
+        if (history.length > 1) {
+          e.preventDefault();
+          history.back();
+        }
+      });
+    });
+  </script>
 </BaseLayout>

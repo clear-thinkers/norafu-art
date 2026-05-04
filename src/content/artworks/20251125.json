@@ -1,0 +1,18 @@
+{
+  "title": {
+    "eng": "alien picnic",
+    "ch": "外星人的野餐"
+  },
+  "date": "20251125",
+  "year": 2025,
+  "medium": "marker",
+  "description": {
+    "eng": "I invited aliens to the North Park for a picnic.",
+    "ch": "我邀请外星人来北公园野餐。"
+  },
+  "imageSrc": "20251125.JPEG",
+  "tags": [
+    "fantasy",
+    "science"
+  ]
+}

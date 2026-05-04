@@ -1,0 +1,18 @@
+{
+  "title": {
+    "eng": "deer in the rain",
+    "ch": "雨中的驯鹿"
+  },
+  "date": "20260203",
+  "year": 2026,
+  "medium": "watercolor",
+  "description": {
+    "eng": "A deer walks through a rainy green field.",
+    "ch": "一头鹿走过下雨的绿地。"
+  },
+  "imageSrc": "20260203.JPEG",
+  "tags": [
+    "animal",
+    "nature"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "title": {
+    "eng": "sea turtle",
+    "ch": "玳瑁"
+  },
+  "date": "20260125",
+  "year": 2026,
+  "medium": "watercolor",
+  "description": {
+    "eng": "A hawksbill sea turtle is swimming slowly in the ocean.",
+    "ch": "玳瑁在海里悠闲地游泳。"
+  },
+  "imageSrc": "20260125.JPEG",
+  "tags": [
+    "sea",
+    "animal"
+  ]
+}

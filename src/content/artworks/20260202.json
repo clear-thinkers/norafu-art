@@ -1,0 +1,18 @@
+{
+  "title": {
+    "eng": "fox on the hill",
+    "ch": "山坡上的狐狸"
+  },
+  "date": "20260202",
+  "year": 2026,
+  "medium": "watercolor",
+  "description": {
+    "eng": "An orange fox walks along a green hill.",
+    "ch": "橙色狐狸沿着绿色山坡往前走。"
+  },
+  "imageSrc": "20260202.JPEG",
+  "tags": [
+    "animal",
+    "nature"
+  ]
+}

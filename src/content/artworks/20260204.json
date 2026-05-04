@@ -1,0 +1,18 @@
+{
+  "title": {
+    "eng": "horse with a saddle",
+    "ch": "带马鞍的马"
+  },
+  "date": "20260204",
+  "year": 2026,
+  "medium": "watercolor",
+  "description": {
+    "eng": "A brown horse carries my friend Amigothe  cat through the forest",
+    "ch": "一匹棕色的马驮着我的朋友阿米戈小猫穿过森林。"
+  },
+  "imageSrc": "20260204.JPEG",
+  "tags": [
+    "animal",
+    "fantasy"
+  ]
+}

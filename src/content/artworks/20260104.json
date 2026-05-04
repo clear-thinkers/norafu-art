@@ -1,0 +1,18 @@
+{
+  "title": {
+    "eng": "octopus",
+    "ch": "章鱼"
+  },
+  "date": "20260104",
+  "year": 2026,
+  "medium": "watercolor",
+  "description": {
+    "eng": "A pink octopus sits on a smoky underwater volcano.",
+    "ch": "章鱼坐在冒烟的海底火山上。"
+  },
+  "imageSrc": "20260104.JPEG",
+  "tags": [
+    "sea",
+    "animal"
+  ]
+}

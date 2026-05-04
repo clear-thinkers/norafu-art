@@ -1,0 +1,18 @@
+{
+  "title": {
+    "eng": "yummy drink",
+    "ch": "好喝的饮料"
+  },
+  "date": "20260302",
+  "year": 2026,
+  "medium": "marker",
+  "description": {
+    "eng": "I love strawberry milkshake.",
+    "ch": "我最爱草莓奶昔了。"
+  },
+  "imageSrc": "20260302.JPEG",
+  "tags": [
+    "food",
+    "fantasy"
+  ]
+}
