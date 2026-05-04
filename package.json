@@ -7,6 +7,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "deploy": "npm run build && gh-pages -d dist -b main --dotfiles",
+    "artwork:prepare": "node scripts/prepare-pending-artwork.mjs",
+    "artwork:prepare:replace": "node scripts/prepare-pending-artwork.mjs --replace --fill-existing",
     "add": "node scripts/add-from-csv.mjs",
     "update": "node scripts/add-from-csv.mjs --update"
   },

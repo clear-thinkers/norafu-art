@@ -5,10 +5,11 @@
 **Adding new artwork:**
 ```
 1. Copy image  →  src/assets/images/YYYYMMDD.JPEG
-2. Edit        →  pending.csv  (add a row at the bottom)
-3. Run         →  npm run add
-4. Preview     →  npm run dev
-5. Publish     →  npm run deploy
+2. Prepare     →  npm run artwork:prepare
+3. Edit        →  pending.csv  (review generated rows)
+4. Run         →  npm run add
+5. Preview     →  npm run dev
+6. Publish     →  npm run deploy
 ```
 
 **Correcting existing artwork metadata:**
@@ -41,6 +42,31 @@ Copy the photo into `src/assets/images/` using the date as the filename.
 ---
 
 ## Step 2 — Fill in pending.csv
+
+After copying images, run:
+
+```
+npm run artwork:prepare
+```
+
+This scans `src/assets/images/`, finds image IDs that do not yet have matching
+JSON files in `src/content/artworks/`, and adds them to `pending.csv`.
+
+If `OPENAI_API_KEY` is set, the script also drafts titles, descriptions,
+medium, and tags using the image plus historical artwork data. Treat AI output
+as a first draft and review it before publishing.
+
+To rebuild `pending.csv` so it only contains unpublished image IDs:
+
+```
+npm run artwork:prepare:replace
+```
+
+If rows already exist but have blank draft fields, set `OPENAI_API_KEY` and run:
+
+```
+npm run artwork:prepare -- --fill-existing
+```
 
 Open `pending.csv` (project root) and add one row per artwork.
 

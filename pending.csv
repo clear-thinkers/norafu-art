@@ -1,11 +1,32 @@
 ﻿id,title_eng,title_ch,description_eng,description_ch,medium,tags
-20250111,the eiffel tower in a storm,雷雨中的埃菲尔铁塔,lightning bolts are striking all around the eiffel tower during a big storm.,埃菲尔铁塔四周电闪雷鸣，暴风雨来了。,"marker, watercolor",urban sketching|nature
-20250329_01,happy onions,快乐的洋葱,"happy onions are a plate, playing with fruit friends",快乐的洋葱们一家在餐桌的盘子上，和水果朋友打招呼。,marker,food|fantasy
-20250329_02,fish in the fire sea,火焰海里的小鱼,colorful fish are swimming in a dark blue sea under a fiery orange sky.,五颜六色的小鱼在深蓝色的大海里游泳，天空燃烧着橙色的火焰。,watercolor,sea|animal|fantasy
-20250405,pokemon dream,神奇宝贝之梦,fennekin and her fancy castle.,火狐狸和她的魔法宫殿。,marker,fantasy|animal
-20250412,dali's time pieces,达利的表,dali made flowing time pieces. i did too.,达利模仿画。,marker,fantasy|dali
-20250427,dancing potatoes,舞动的土豆,"me: ""Nora, are these... bacteria?"" Nora: ""No! They're potatoes! They're dancing!""",我：“瓜瓜，这些是细菌吗？” 瓜瓜：“不是！它们是土豆！它们在跳舞！”,marker,food|fantasy
-20250907,snail's beach time,蜗牛的海滩时光,the snail is having a relaxing time on a beautiful island.,蜗牛享受着它的海滩慢时光。,marker,nature|sea|animal
-20250921_01,cool peppers,辣椒们的海滩时光,orange and red peppers chilling on the beach.,辣椒们在海滩上玩耍。,marker,food|sea
-20250921_02,wake up onion,洋葱快起床,veggie friends wanted to play with onion.,蔬菜伙伴们叫洋葱起床玩耍。,marker,food|fantasy
-20250928,ants crossing the ocean,蚂蚁过海,ants sailing on leaves to cross the ocean.,蚂蚁们乘着叶子船，穿越大海。,marker,animal|fantasy
+20250501,dancing leaves,叶子跳舞,leaves dancing on the page,叶子在纸面上跳舞。,watercolor,nature
+20250502,squirrel on a stump,树桩上的松鼠,a squirrel sits on a tree stump and looks ready for a snack.,一只小松鼠在树桩上找零食吃。,marker,animal|nature
+20250801,charmander party,小火龙派对,charmander is ready for a party!,小火龙举着气球正要去参加派对。,marker,fantasy|animal
+20250901,forest tour,森林之旅,a tiny rider rests on a sleepy snail under a tree.,我在森林中遇见了一头酣睡的狮子。在狮子的背上很安全，毒蛇咬不到我。,"marker, watercolor",animal|fantasy|nature
+20250902,fruit juice maker,水果榨汁机,a fruit juice machine is making drinks with happy fruit friends.,水果朋友们和水果榨汁机。,marker,food|fantasy
+20250903,colorful bottles,彩色瓶子,colorful bottles are lined up together on a table.,彩色瓶子们排排站在桌子上。,watercolor,still life
+20250904,jacket,外套写生,a sketch of a nice coat with big pockets.,这是一件时髦的外套。,pencil,still life
+20251005,mid-autumn day,中秋节,it is the mid-autumn day. little bunny maomao is enjoying mooncakes under at the moon.,中秋节了，毛毛小兔子吃着月饼，点着花灯赏月。嫦娥也飞来说“中秋快乐！”,marker,family|festival
+20251012,pyramid treasure hunt,沙漠寻宝,a camel is going to the pyramids to find treasure. a little bird quietly tells it a clue.,骆驼要去金字塔里寻宝，小鸟悄悄告诉它线索。,marker,animal|nature
+20251031,elephant chef,大象厨师,an elephant chef made a pumpkin pie for thanksgiving.,大象厨师烤了一个南瓜派。笨拙的它还打碎了一个鸡蛋。,marker,animal|food|fantasy
+20251103,turkey and cocoa,火鸡爱喝热可可,a turkey holds a cup of hot cocoa and drinks it happily.,火鸡捧着一杯热可可，喝得很开心。,watercolor,animal|food
+20251110,ducks under the sun,鸭子晒太阳,a mama duck and her baby duck sit by the river in winter and enjoy the sunshine.,鸭妈妈和鸭宝宝在冬天的河边晒太阳。,watercolor,animal|nature
+20251116,Nezha,哪吒,i really like Nezha.,我很喜欢哪吒。,marker,portrait|fantasy
+20251125,alien picnic,外星人的野餐,I invited aliens to the North Park for a picnic.,我邀请外星人来北公园野餐。,marker,fantasy|science
+20260104,octopus,章鱼,a pink octopus sits on a smoky underwater volcano.,章鱼坐在冒烟的海底火山上。,watercolor,sea|animal
+20260111,jellyfish,水母,purple jellyfish drift through the water.,粉紫色的水母在水里慢慢漂着。,watercolor,sea|animal
+20260117,whale,鲸鱼,a blue whale swims with jellyfish and sea plants.,蓝色鲸鱼和水母、海草一起在海里游。,watercolor,sea|animal
+20260125,sea turtle,玳瑁,a hawksbill sea turtle is swimming slowly in the ocean.,玳瑁在海里悠闲地游泳。,watercolor,sea|animal
+20260201,if I were a puppy,开心的小狗,"i was born in the year of the dog. if i were a puppy, i would want to be a cute golden retriever.",我属狗。如果我是一只小狗，我希望是一只可爱的金毛猎犬。,watercolor,animal|nature
+20260202,fox on the hill,山坡上的狐狸,an orange fox walks along a green hill.,橙色狐狸沿着绿色山坡往前走。,watercolor,animal|nature
+20260203,deer in the rain,雨中的驯鹿,a deer walks through a rainy green field.,一头鹿走过下雨的绿地。,watercolor,animal|nature
+20260204,horse with a saddle,带马鞍的马,a brown horse carries my friend Amigothe  cat through the forest,一匹棕色的马驮着我的朋友阿米戈小猫穿过森林。,watercolor,animal|fantasy
+20260301,cake for you,一块蛋糕,a slice of cake sits on a plate.,这是我为你准备的蛋糕。,marker,food|still life
+20260302,yummy drink,好喝的饮料,I love strawberry milkshake.,我最爱草莓奶昔了。,marker,food|fantasy
+20260401,flower in a Campbell can,番茄罐头里的花,A bouquet of flowers in a Campbell tomato soup can.,一束花插在一只金宝番茄罐头里。,marker,nature|still life
+20260402,sunset train,夕阳下的小火车,a train travels along the tracks under a glowing orange sky.,小火车在橙色夕阳下沿着铁轨前进。,watercolor,urban sketching
+20260403,family portrait,家庭画像,a family portrait shows three people and a little pet.,这是一张家庭画像，里面有三个人和一只小宠物。,marker,portrait|family
+20260404,nora's name,Nora的名字,Nora's name is decorated with little bugs and bright colors.,Nora的名字被小虫子和鲜艳的颜色装饰起来。,marker,portrait|fantasy
+20260501,broccoli by the water,水边的西兰花,a big green broccoli sits beside blue water and yellow sand.,一棵大大的绿色西兰花坐在蓝色水边和黄色沙地旁。,watercolor,food|nature
+20260502,eggplant and veggie friends,茄子和蔬菜朋友,a giant eggplant floats with colorful vegetable friends.,一个大茄子和五颜六色的蔬菜朋友们漂在一起。,watercolor,food|fantasy
+20260503,sleepy potatoes,困困的土豆,potato friends wear tiny hats and rest together.,土豆朋友们戴着小帽子，一起休息。,marker,food|fantasy
