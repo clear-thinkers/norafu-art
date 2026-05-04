@@ -1,0 +1,1 @@
+import"./hoisted.BScVxmeO.js";document.addEventListener("astro:page-load",()=>{document.getElementById("back-btn")?.addEventListener("click",e=>{history.length>1&&(e.preventDefault(),history.back())})});
