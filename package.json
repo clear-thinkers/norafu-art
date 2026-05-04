@@ -10,7 +10,8 @@
     "artwork:prepare": "node scripts/prepare-pending-artwork.mjs",
     "artwork:prepare:replace": "node scripts/prepare-pending-artwork.mjs --replace --fill-existing",
     "add": "node scripts/add-from-csv.mjs",
-    "update": "node scripts/add-from-csv.mjs --update"
+    "update": "node scripts/add-from-csv.mjs --update",
+    "update-fonts": "node scripts/update-fonts.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.18",

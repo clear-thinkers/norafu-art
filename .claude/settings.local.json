@@ -4,7 +4,14 @@
       "Bash(git clone *)",
       "PowerShell(git clone https://github.com/clear-thinkers/norafu-art \"c:\\\\Users\\\\alexi\\\\coding\\\\_norafu_temp\" 2>&1)",
       "PowerShell(Get-ChildItem -Force \"c:\\\\Users\\\\alexi\\\\coding\\\\_norafu_temp\" | ForEach-Object { Move-Item $_.FullName \"c:\\\\Users\\\\alexi\\\\coding\\\\norafu-art\\\\\" -Force }; Remove-Item \"c:\\\\Users\\\\alexi\\\\coding\\\\_norafu_temp\" -Force -Recurse)",
-      "Bash(node scripts/fix-eng-descriptions.mjs)"
+      "Bash(node scripts/fix-eng-descriptions.mjs)",
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\alexi\\\\coding\\\\norafu-art\" -Recurse -Force -ErrorAction SilentlyContinue)",
+      "Bash(Select-Object FullName)",
+      "Bash(Head -50)",
+      "PowerShell(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\alexi\\\\coding\\\\norafu-art\\\\public\\\\fonts\\\\en\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\alexi\\\\coding\\\\norafu-art\\\\public\\\\fonts\\\\zh\")",
+      "PowerShell(Move-Item \"C:\\\\Users\\\\alexi\\\\coding\\\\norafu-art\\\\public\\\\fonts\\\\YRDZST Semibold.ttf\" \"C:\\\\Users\\\\alexi\\\\coding\\\\norafu-art\\\\public\\\\fonts\\\\zh\\\\YRDZST Semibold.ttf\" -Force)",
+      "Bash(node scripts/update-fonts.mjs)"
     ]
   }
 }

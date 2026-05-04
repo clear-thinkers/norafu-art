@@ -1,12 +1,27 @@
 /* ── Variables ─────────────────────────────────────────── */
+
+/* AUTO-FONT-START — managed by scripts/update-fonts.mjs */
+@font-face {
+  font-family: 'NorafuZH';
+  src: url('/norafu-art/fonts/zh/YRDZST%20Semibold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/* AUTO-FONT-END */
+
 :root {
-  --font-main: 'Iansui', 'Roboto', sans-serif;
+  --font-main: 'NorafuEN', 'NorafuZH', sans-serif;
   --text-primary: #333;
   --text-secondary: #666;
   --bg-primary: #ffffff;
   --button-bg: #ddcbf2;
   --button-text: #ffffff;
   --button-hover: #cbccf2;
+}
+
+html[lang="zh"] {
+  --font-main: 'NorafuZH', 'NorafuEN', sans-serif;
 }
 
 /* ── Base ──────────────────────────────────────────────── */
@@ -48,6 +63,7 @@ body {
 }
 
 .navbar a {
+  font-size: 1.125rem;
   padding: 0.5rem 1rem;
   transition: background-color 0.3s ease;
   font-family: var(--font-main);
@@ -147,6 +163,7 @@ body {
 .art-detail-info {
   flex: 1;
   padding: 1rem;
+  font-size: 1.125rem;
   display: flex;
   flex-direction: column;
 }
@@ -164,7 +181,7 @@ body {
   background-color: #f4f4f4;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #666;
 }
 
