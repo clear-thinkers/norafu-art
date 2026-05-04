@@ -46,6 +46,18 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   </body>
 </html>
 
+<script>
+  // Save the gallery URL whenever the user navigates from a gallery/year page into an artwork page.
+  // This persists across language switches so the back button can return to the correct view.
+  document.addEventListener('astro:before-preparation', (e) => {
+    const from = (e as any).from as URL;
+    const to   = (e as any).to   as URL;
+    if (!from.pathname.includes('/artwork/') && to.pathname.includes('/artwork/')) {
+      sessionStorage.setItem('galleryReturn', from.href);
+    }
+  });
+</script>
+
 <style is:global>
   @import '../styles/global.css';
 </style>

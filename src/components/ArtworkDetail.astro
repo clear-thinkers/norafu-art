@@ -109,11 +109,33 @@ const jsonLd = {
 
   <script>
     document.addEventListener('astro:page-load', () => {
-      document.getElementById('back-btn')?.addEventListener('click', (e) => {
-        if (history.length > 1) {
-          e.preventDefault();
-          history.back();
+      const btn = document.getElementById('back-btn') as HTMLAnchorElement | null;
+      if (!btn) return;
+
+      btn.addEventListener('click', (e) => {
+        const saved = sessionStorage.getItem('galleryReturn');
+        if (!saved) {
+          if (history.length > 1) { e.preventDefault(); history.back(); }
+          return;
         }
+        e.preventDefault();
+
+        const isZh   = document.documentElement.lang === 'zh';
+        const savedUrl = new URL(saved);
+        const btnUrl   = new URL(btn.href);
+
+        // Derive the locale-neutral base path from the back button's href.
+        // EN: /norafu-art/          ZH: /norafu-art/zh/  →  strip trailing zh/
+        const base = isZh
+          ? btnUrl.pathname.replace(/zh\/$/, '')
+          : btnUrl.pathname;
+
+        // Strip base + any locale prefix from the saved path to get a clean relative path.
+        const savedPath = savedUrl.pathname;
+        const rel       = savedPath.startsWith(base) ? savedPath.slice(base.length) : savedPath.replace(/^\//, '');
+        const cleanRel  = rel.replace(/^zh\//, '');
+
+        window.location.href = btnUrl.origin + (isZh ? `${base}zh/${cleanRel}` : `${base}${cleanRel}`);
       });
     });
   </script>

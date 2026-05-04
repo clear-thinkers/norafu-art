@@ -2,6 +2,14 @@
 
 /* AUTO-FONT-START — managed by scripts/update-fonts.mjs */
 @font-face {
+  font-family: 'NorafuEN';
+  src: url('/norafu-art/fonts/en/Kalam-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'NorafuZH';
   src: url('/norafu-art/fonts/zh/YRDZST%20Semibold.ttf') format('truetype');
   font-weight: normal;
@@ -22,6 +30,19 @@
 
 html[lang="zh"] {
   --font-main: 'NorafuZH', 'NorafuEN', sans-serif;
+}
+
+html[lang="zh"] .art-detail-info p {
+  font-size: 1.25rem;
+}
+
+html[lang="zh"] .art-tag {
+  font-size: 1.125rem;
+}
+
+html[lang="zh"] .back-button,
+html[lang="zh"] .button {
+  font-size: 1.125rem;
 }
 
 /* ── Base ──────────────────────────────────────────────── */
@@ -245,7 +266,7 @@ body {
   border-radius: 8px;
 }
 
-.contact-description { text-align: center; }
+.about-container .contact-description { text-align: center; }
 
 .contact-email {
   display: inline-block;
