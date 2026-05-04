@@ -223,6 +223,7 @@ body {
 
 .about-portrait {
   max-width: 50%;
+  height: auto;
   border-radius: 10px;
   margin-bottom: 20px;
 }
